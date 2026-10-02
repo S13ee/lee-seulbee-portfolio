@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Lee Seulbee — Resume</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600&family=Instrument+Serif&family=Noto+Sans+KR:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root{ --bg:#E9E8E4; --paper:#F4F3EF; --ink:#161B26; --muted:#6F737C; --faint:#A9ABAF; --accent:#E2B33C; --line:rgba(22,27,38,.12);
+    --cond:'Barlow Condensed','Arial Narrow',sans-serif; --serif:'Instrument Serif',Georgia,serif; --kr:'Noto Sans KR','Apple SD Gothic Neo','Malgun Gothic',sans-serif; color-scheme:light; }
+  :root{ box-sizing:border-box; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px); }
+  *,*::before,*::after{ box-sizing:inherit; }
+  html{ scroll-padding-top:env(safe-area-inset-top,0px); }
+  body{ margin:0; background:var(--bg); color:var(--ink); font-family:var(--kr); font-weight:300; line-height:1.75; -webkit-font-smoothing:antialiased; word-break:keep-all; overflow-wrap:break-word; }
+  a{ color:inherit; }
+  :focus-visible{ outline:2px solid var(--ink); outline-offset:3px; border-radius:3px; }
+  .top{ display:flex; justify-content:space-between; align-items:center; padding:22px 28px; font-family:var(--cond); font-weight:500; font-size:16px; letter-spacing:.02em; }
+  .top a{ text-decoration:none; border-bottom:1px solid transparent; }
+  .top a:hover{ border-color:var(--ink); }
+  .sheet{ max-width:880px; margin:10px auto 70px; background:var(--paper); border-radius:28px; padding:64px 64px 56px; }
+  .head{ text-align:center; padding-bottom:40px; border-bottom:1px solid var(--line); }
+  .head .name{ font-family:var(--serif); font-size:24px; line-height:1.2; }
+  .head h1{ font-family:var(--cond); font-weight:600; font-size:clamp(64px,10vw,112px); line-height:.9; margin:14px 0 0; letter-spacing:0; }
+  .head .en{ font-family:var(--serif); font-size:22px; margin-top:18px; }
+  .head .ko{ font-size:15px; color:var(--muted); margin-top:4px; }
+  .contact{ display:flex; justify-content:center; gap:22px; flex-wrap:wrap; margin-top:22px; font-size:14.5px; }
+  .contact a{ text-decoration:none; padding-bottom:2px; background:linear-gradient(var(--accent),var(--accent)) left bottom / 100% 1.5px no-repeat; }
+  section{ display:grid; grid-template-columns:170px 1fr; gap:28px; padding:34px 0; border-bottom:1px solid var(--line); }
+  section:last-of-type{ border-bottom:0; }
+  section h2{ font-family:var(--cond); font-weight:600; font-size:30px; line-height:1; margin:2px 0 0; letter-spacing:0; }
+  section p{ margin:0; font-size:15.5px; }
+  .item{ display:grid; grid-template-columns:150px 1fr; gap:18px; }
+  .item + .item{ margin-top:16px; }
+  .when{ font-family:var(--cond); font-weight:500; font-size:17px; letter-spacing:.02em; color:var(--muted); line-height:1.5; }
+  .what b{ font-weight:500; display:block; font-size:16px; }
+  .what span{ display:block; font-size:14.5px; color:var(--muted); }
+  .stats{ display:flex; gap:28px; flex-wrap:wrap; margin-top:12px; }
+  .stat .v{ font-family:var(--cond); font-weight:500; font-size:34px; line-height:1; }
+  .stat .l{ font-size:13px; color:var(--muted); margin-top:4px; }
+  .tasks{ list-style:none; margin:0; padding:0; display:grid; grid-template-columns:1fr; gap:0; }
+  .tasks li{ display:grid; grid-template-columns:70px 1fr auto; gap:10px; align-items:baseline; font-size:14px; padding:6px 0; border-bottom:1px solid var(--line); }
+  .tasks .c{ font-family:var(--cond); font-weight:600; font-size:16px; }
+  .tasks .s{ font-size:12.5px; color:var(--muted); white-space:nowrap; }
+  .tasks .s.now{ color:var(--ink); font-weight:500; }
+  .tasks .s.now::before{ content:""; display:inline-block; width:7px; height:7px; border-radius:50%; background:var(--accent); margin-right:6px; vertical-align:1px; }
+  .asof{ text-align:right; font-size:12.5px; color:var(--muted); margin-top:26px; }
+  @media (max-width:760px){
+    .sheet{ margin:0 12px 40px; padding:40px 22px 34px; border-radius:22px; }
+    section{ grid-template-columns:1fr; gap:14px; }
+    .item{ grid-template-columns:1fr; gap:2px; }
+    .tasks{ grid-template-columns:1fr; }
+  }
+  @media print{
+    @page{ size:A4; margin:14mm; }
+    body{ background:#fff; }
+    .top{ display:none; }
+    .sheet{ margin:0; padding:0; background:#fff; border-radius:0; max-width:none; }
+    section{ break-inside:avoid; }
+  }
+</style>
+</head>
+<body>
+<header class="top"><a href="./">Portfolio</a><span>Resume</span></header>
+
+<main class="sheet">
+  <div class="head">
+    <div class="name">Lee Seulbee</div>
+    <h1>RESUME</h1>
+    <div class="en">Unafraid of new beginnings.</div>
+    <div class="ko">예술을 넘어, 새로운 분야로 영역을 넓혀가는 사람</div>
+    <div class="contact">
+      <a href="mailto:eebseel@gmail.com">eebseel@gmail.com</a>
+      <a href="./">Portfolio</a>
+      <a href="files/LeeSeulbee_resume.pdf" download>PDF 내려받기</a>
+    </div>
+  </div>
+
+  <section>
+    <h2>Profile</h2>
+    <p>박물관과 미술관에서 전시·콘텐츠를 기획하다가, 2026년 8월부터 디지털 분야 교육 과정을 밟고 있습니다.</p>
+  </section>
+
+  <section>
+    <h2>Education</h2>
+    <div class="item"><div class="when">Major</div><div class="what"><b>예술 전공</b></div></div>
+  </section>
+
+  <section>
+    <h2>Experience</h2>
+    <div class="item">
+      <div class="when">약 5~6년</div>
+      <div class="what"><b>박물관·미술관, 게임사가 운영하는 뮤지엄 포함</b><span>전시 작품 관리, 전시 공간 구성, 전시 연계 콘텐츠 기획</span></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Training</h2>
+    <div>
+      <div class="item">
+        <div class="when">2026.08.11 —</div>
+        <div class="what"><b>SKT ALEPH K-Digital Training</b><span>진행 중</span></div>
+      </div>
+      <div class="stats">
+        <div class="stat"><div class="v">91.7%</div><div class="l">출석률, 재적일 36일 중 33일</div></div>
+        <div class="stat"><div class="v">11 / 13</div><div class="l">과제 제출</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Projects</h2>
+    <ul class="tasks">
+      <li><span class="c">T01</span><span>나를 소개하는 한 페이지</span><span class="s">제출</span></li>
+      <li><span class="c">T02</span><span>내가 설계한 미니게임</span><span class="s">제출</span></li>
+      <li><span class="c">T03</span><span>짤·카드 스튜디오</span><span class="s">제출</span></li>
+      <li><span class="c">T04</span><span>오늘의 진짜 정보판, 데이터가 안 올 때</span><span class="s">제출</span></li>
+      <li><span class="c">T05</span><span>대화가 끊겨도 이어지는 프로젝트</span><span class="s">제출</span></li>
+      <li><span class="c">T06</span><span>플랜두씨 다이어리 1, 내 계획과 실제를 담는 앱</span><span class="s">제출</span></li>
+      <li><span class="c">T07</span><span>플랜두씨 다이어리 2, 인증을 붙이고 붙인 방법 설명하기</span><span class="s">제출</span></li>
+      <li><span class="c">T08</span><span>내 소개 페이지에 패스키 달기</span><span class="s">제출</span></li>
+      <li><span class="c">T09</span><span>나를 말하는 에이전트, 리추얼 기록에서 강점 찾기</span><span class="s">제출</span></li>
+      <li><span class="c">T10</span><span>AI와 함께 쓰는 첫 논문, 가설에서 결론까지</span><span class="s">제출</span></li>
+      <li><span class="c">T11</span><span>나에 대한 3만 자 장편소설</span><span class="s">제출</span></li>
+      <li><span class="c">Final A</span><span>나를 소개하는 사이트와 계속 새로 쓰는 장치</span><span class="s now">진행 중</span></li>
+      <li><span class="c">Final B</span><span>내 논문을 반영한 애플리케이션</span><span class="s">예정</span></li>
+    </ul>
+    <div class="asof" style="grid-column:1 / -1">2026.10.02 기준</div>
+  </section>
+</main>
+</body>
+</html>
