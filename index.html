@@ -715,5 +715,24 @@
   });
 })();
 </script>
+<script>
+/* 메일 주소: 누르면 주소를 복사하고(메일 앱이 있으면 함께 열림) 잠깐 알려준다 */
+document.querySelectorAll('a[href^="mailto:"]').forEach(a => {
+  const addr = a.getAttribute('href').replace('mailto:', '');
+  const label = a.textContent;
+  a.addEventListener('click', () => {
+    const done = () => {
+      a.style.minWidth = a.offsetWidth + 'px';
+      a.style.justifyContent = 'center';
+      a.textContent = '주소를 복사했습니다';
+      clearTimeout(a._t);
+      a._t = setTimeout(() => { a.textContent = label; }, 1800);
+    };
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(addr).then(done).catch(() => {});
+    }
+  });
+});
+</script>
 </body>
 </html>
